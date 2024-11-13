@@ -2,7 +2,7 @@ import java.util.*;
 
 class Validator {
 	static boolean isRoman(String inputStr){
-		return inputStr.matches("^I$|^II$|^III$|^IV$|^V$|^VI$|^VII$|^VIII$|^IX$|^X$");
+		return inputStr.matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$");
 
 	}
 
@@ -46,7 +46,9 @@ class Validator {
 		}
 
 		if (((num1 < 0) || (num1 > 10)) || ((num2 < 0) || (num2 > 10))) {
-			throw new RuntimeException("Число вне числового интервала! Используйте числа от 1 до 10!");
+			System.out.println("Число вне числового интервала! Используйте числа от 1 до 10");
+			throw new RuntimeException();
+
 		}
 
 
