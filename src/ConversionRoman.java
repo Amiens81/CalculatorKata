@@ -124,9 +124,10 @@ public class ConversionRoman {
 		return result;
 	}
 	static String ArabicToRomanNum(int input){
-
+		if (input == 0 || input > 3999){
+			return "Недопустимое значение Римского числа";}
 		if(input < 0 ) {
-			System.out.print("В римской системе счисления нет отрицательных  цифр!");
+			System.out.print("В римской системе счисления нет отрицательных цифр!");
 		}
 		String s = "";
 		while(input >= 1000){
